@@ -35,9 +35,9 @@ public class ControllerPruebaMArtin implements ActionListener{
         switch(comand){
             case "index" -> {
             view.dispose();
-             ViewIndex viewIndex;
-             ModelIndex modelIndex;
-            ControllerIndex controller = new ControllerIndex();
+             ViewIndex vista = new ViewIndex();
+             ModelIndex modelo = new ModelIndex();
+             ControllerIndex controller = new ControllerIndex(vista, modelo);
             }
         }
     }
