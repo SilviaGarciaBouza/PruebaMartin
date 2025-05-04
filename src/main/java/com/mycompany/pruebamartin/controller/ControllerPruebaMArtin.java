@@ -4,7 +4,9 @@
  */
 package com.mycompany.pruebamartin.controller;
 
+import com.mycompany.pruebamartin.model.ModelIndex;
 import com.mycompany.pruebamartin.model.ModelPruebaMartin;
+import com.mycompany.pruebamartin.view.ViewIndex;
 import com.mycompany.pruebamartin.view.ViewMartin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +19,7 @@ public class ControllerPruebaMArtin implements ActionListener{
     
     ViewMartin view;
     ModelPruebaMartin model;
+   
 
     public ControllerPruebaMArtin(ViewMartin view,ModelPruebaMartin model) {
         this.view= view;
@@ -28,7 +31,15 @@ public class ControllerPruebaMArtin implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        String comand = e.getActionCommand();
+        switch(comand){
+            case "index" -> {
+            view.dispose();
+             ViewIndex viewIndex;
+             ModelIndex modelIndex;
+            ControllerIndex controller = new ControllerIndex();
+            }
+        }
     }
     
 }
